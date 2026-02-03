@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Valentine’s Day</title>
+  .petal {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }<style>
+    <script>
+  for (let i = 0; i < 20; i++) {
+    let petal = document.createElement("div");
+    petal.className = "petal";
+    petal.innerText = "🌹";
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = (5 + Math.random() * 5) + "s";
+    petal.style.fontSize = (20 + Math.random() * 20) + "px";
+    document.body.appendChild(petal);
+  }
+</script>    body {
+      background: #ffe6ee;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 80px;
+    }
+    .card {
+      background: white;
+      display: inline-block;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    button {
+      margin-top: 20px;
+      padding: 15px 25px;
+      font-size: 16px;
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>🌹 Happy Valentine’s Day 🌹</h1>
+    <p>I hope you are doing good</p>
+
+    <button onclick="document.getElementById('voice').play()">
+      💖 Play Message
+    </button>
+
+    <audio id="voice" src="message.mp3"></audio>
+  </div>
+
+</body>
+</html>
